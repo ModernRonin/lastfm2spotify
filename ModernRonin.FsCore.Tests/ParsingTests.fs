@@ -14,3 +14,17 @@ module parseInt=
         parseInt "13" |> should equal (Some 13)
 
 
+module ``Active pattern Int``=
+    [<Test>]
+    let ``does not match if string is not an int``()= 
+        match "bla" with
+        | Int _ -> false
+        | _ -> true
+        |> should be True
+
+    [<Test>]
+    let ``matches and returns the number if string is an int``()=
+        match "13" with
+        | Int n -> n
+        | _ -> 0
+        |> should equal 13
