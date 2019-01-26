@@ -11,7 +11,11 @@ Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "ModernRonin.FsCore", "Moder
 EndProject
 Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "ModernRonin.ConsoleUi", "ModernRonin.ConsoleUi\ModernRonin.ConsoleUi.fsproj", "{646E9EDF-7562-4160-93E4-7E24C2BEC1A2}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ModernRonin.FsCore.Tests", "ModernRonin.FsCore.Tests\ModernRonin.FsCore.Tests.fsproj", "{DE617377-2D2D-4F56-872B-B328017EC729}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "ModernRonin.FsCore.Tests", "ModernRonin.FsCore.Tests\ModernRonin.FsCore.Tests.fsproj", "{DE617377-2D2D-4F56-872B-B328017EC729}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{35645E8B-35DF-4C5B-A01F-4579BB501B34}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "libs", "libs", "{08C6D972-79AA-4F0E-AF96-9A8D0EC6EFF4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -42,6 +46,12 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E3D6DAC8-EBAC-4914-B69C-B958BB5E3397} = {08C6D972-79AA-4F0E-AF96-9A8D0EC6EFF4}
+		{7815B057-A688-40BB-B092-CCB30E28EAB7} = {08C6D972-79AA-4F0E-AF96-9A8D0EC6EFF4}
+		{646E9EDF-7562-4160-93E4-7E24C2BEC1A2} = {08C6D972-79AA-4F0E-AF96-9A8D0EC6EFF4}
+		{DE617377-2D2D-4F56-872B-B328017EC729} = {35645E8B-35DF-4C5B-A01F-4579BB501B34}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {313A80FF-12D8-4C3A-99DE-6A3B3DF45365}
