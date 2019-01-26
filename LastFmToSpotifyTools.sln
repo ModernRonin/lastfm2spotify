@@ -11,6 +11,8 @@ Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "ModernRonin.FsCore", "Moder
 EndProject
 Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "ModernRonin.ConsoleUi", "ModernRonin.ConsoleUi\ModernRonin.ConsoleUi.fsproj", "{646E9EDF-7562-4160-93E4-7E24C2BEC1A2}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ModernRonin.FsCore.Tests", "ModernRonin.FsCore.Tests\ModernRonin.FsCore.Tests.fsproj", "{DE617377-2D2D-4F56-872B-B328017EC729}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{646E9EDF-7562-4160-93E4-7E24C2BEC1A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{646E9EDF-7562-4160-93E4-7E24C2BEC1A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{646E9EDF-7562-4160-93E4-7E24C2BEC1A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE617377-2D2D-4F56-872B-B328017EC729}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE617377-2D2D-4F56-872B-B328017EC729}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE617377-2D2D-4F56-872B-B328017EC729}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE617377-2D2D-4F56-872B-B328017EC729}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
