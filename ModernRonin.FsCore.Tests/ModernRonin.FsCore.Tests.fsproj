@@ -6,7 +6,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="Strings.fs" />
+    <Compile Include="StringsTests.fs" />
+    <Compile Include="ParsingTests.fs" />
   </ItemGroup>
 
   <ItemGroup>
