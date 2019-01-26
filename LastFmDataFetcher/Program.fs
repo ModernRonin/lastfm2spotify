@@ -10,7 +10,8 @@ module Program=
         LastFmApi.setApiKey cfg.LastFmApiKey
         SpotifyApi.setApiKey cfg.SpotifyClientKey
 
-        Interaction.setupConsole()
+        // make sure users can input the long response url from the spotify authorization
+        Interaction.setupMaximumInputLength 1000
         StateMachine.run (Start, SharedState.Initial)
 
 

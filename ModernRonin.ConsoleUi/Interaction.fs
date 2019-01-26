@@ -5,10 +5,8 @@ module Interaction=
     open System
     open ModernRonin.FsCore.Parsing
     
-
-    // make sure Console.ReadLine() has a big enough input length limit
-    let setupConsole() =
-        Console.SetIn(new System.IO.StreamReader(Console.OpenStandardInput(1000), Console.InputEncoding, false, 1000))
+    let setupMaximumInputLength limit= 
+        Console.SetIn(new System.IO.StreamReader(Console.OpenStandardInput(limit), Console.InputEncoding, false, limit))
 
     let readLine() = Console.ReadLine().Trim()
 
