@@ -5,11 +5,11 @@ VisualStudioVersion = 15.0.28307.271
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "LastFmDataFetcher", "LastFmDataFetcher\LastFmDataFetcher.fsproj", "{8044F60C-0BA1-49A6-BE32-93B64B788B16}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ModernRonin.LastFmToSpotify", "ModernRonin.LastFmToSpotify\ModernRonin.LastFmToSpotify.fsproj", "{E3D6DAC8-EBAC-4914-B69C-B958BB5E3397}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "ModernRonin.LastFmToSpotify", "ModernRonin.LastFmToSpotify\ModernRonin.LastFmToSpotify.fsproj", "{E3D6DAC8-EBAC-4914-B69C-B958BB5E3397}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ModernRonin.FsCore", "ModernRonin.FsCore\ModernRonin.FsCore.fsproj", "{7815B057-A688-40BB-B092-CCB30E28EAB7}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "ModernRonin.FsCore", "ModernRonin.FsCore\ModernRonin.FsCore.fsproj", "{7815B057-A688-40BB-B092-CCB30E28EAB7}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ModernRonin.ConsoleUi", "ModernRonin.ConsoleUi\ModernRonin.ConsoleUi.fsproj", "{646E9EDF-7562-4160-93E4-7E24C2BEC1A2}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "ModernRonin.ConsoleUi", "ModernRonin.ConsoleUi\ModernRonin.ConsoleUi.fsproj", "{646E9EDF-7562-4160-93E4-7E24C2BEC1A2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
