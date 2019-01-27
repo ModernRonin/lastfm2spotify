@@ -5,6 +5,10 @@
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <IsTestProject>true</IsTestProject>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="TerminalTests.fs" />
+  </ItemGroup>
   
   <ItemGroup>
     <PackageReference Include="FsUnit" Version="3.4.0" />

@@ -2,18 +2,19 @@
 
 open System
 open ModernRonin.FsCore.Parsing
+open ModernRonin.FsCore.ListExtensions
 
 type LineIo = { 
-                writer: string->unit
-                reader: unit ->string
-                prompt: unit->unit
+                Writer: string->unit
+                Reader: unit ->string
+                Prompt: unit->unit
               }
 
 type Terminal(io: LineIo)=
-    let writeLine= io.writer
-    let prompt= io.prompt
+    let writeLine= io.Writer
+    let prompt= io.Prompt
 
-    member this.readLine= io.reader
+    member this.readLine= io.Reader
 
     member this.indexOfUserChoice labels = 
         let line index text = sprintf "%02i-->%s" index text
@@ -24,9 +25,11 @@ type Terminal(io: LineIo)=
         let input = this.readLine().ToLowerInvariant()
         parseInt input
 
-    member this.userChoice optionFormatter options =
-        let optionForIndex index = List.item index options
-        options |> List.map optionFormatter |> this.indexOfUserChoice |> Option.map optionForIndex
+    member this.userChoice optionFormatter options=
+        options 
+        |> List.map optionFormatter 
+        |> this.indexOfUserChoice 
+        |> List.optionItemOrNone <| options
    
 
     member this.userEntry title= 
@@ -37,15 +40,16 @@ type Terminal(io: LineIo)=
         | u -> Some(u)
 
 
-    member this.userChoiceOrFreeform title options =
-        let choice = "Enter manually" :: options |> this.indexOfUserChoice
+    member this.userChoiceOrFreeform title labels =
+        let choice = "Enter manually" :: labels |> this.indexOfUserChoice
         match choice with
         | Some 0 -> this.userEntry title 
-        | Some index -> Some(List.item (index-1) options)
+        | Some index -> List.itemOrNone (index-1) labels
         | None -> None
 
     member this.yesOrNo question=
         sprintf "%s (yes/no)?" question |> writeLine
+        prompt()
         let rec loop() = 
             match this.readLine().ToLowerInvariant() with 
             | "y"
@@ -62,9 +66,9 @@ module Interaction=
 
     
     let private terminal= new Terminal({
-                                            writer= printfn "%s"
-                                            reader= (fun () -> Console.ReadLine().Trim())
-                                            prompt= (fun() -> printf ">")
+                                            Writer= printfn "%s"
+                                            Reader= (fun () -> Console.ReadLine().Trim())
+                                            Prompt= (fun() -> printf ">")
                                       })
     
     let readLine = terminal.readLine
